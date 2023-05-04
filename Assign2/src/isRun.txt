@@ -1,0 +1,38 @@
+private boolean isRun (Set<Card> set) {
+		// In this method, we are going through the given set to check if it constitutes a run of 3 or more
+		// consecutive cards. To do this, we are going to create an array of 13 cells to represent the
+		// range of card ranks from 1 to 13. We go through each card and increment the cell corresponding to
+		// each card's rank. For example, an Ace (rank 1) would cause the first (index 0) cell to increment.
+		// An 8 would cause the 8th (index 7) cell to increment. When this loop is done, the array will
+		// contain 5 or less cells with values of 1 or more to represent the number of cards with each rank.
+		// Then we can use this array to search for 3 or more consecutive non-zero values to represent a run.
+		
+		int n = set.getLength();
+		
+		if (n <= 2) return false; // Run must be at least 3 in length.
+		
+		int[] rankArr = new int[13];
+		for (int i = 0; i < 13; i++) rankArr[i] = 0; // Ensure the default values are all 0.
+		
+		for (int i = 0; i < n; i++) {
+			rankArr[set.getElement(i).getRunRank()-1] += 1;
+		}
+
+		// Now search in the array for a sequence of n consecutive 1's.
+		int streak = 0;
+		int maxStreak = 0;
+		for (int i = 0; i < 13; i++) {
+			if (rankArr[i] == 1) {
+				streak++;
+				if (streak > maxStreak) maxStreak = streak;
+			} else {
+				streak = 0;
+			}
+		}
+		if (maxStreak == n) { // Check if this is the maximum streak.
+			return true;
+		} else {
+			return false;
+		}
+
+	}

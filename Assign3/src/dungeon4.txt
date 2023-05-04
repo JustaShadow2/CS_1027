@@ -1,0 +1,22 @@
+First line: #rows, #columns, optional delay, optional chamber size. Other lines: U-free, W-wall, D-dragon, L-lava, C-Cacti, S-Initial, E-Exit
+20 20 
+W W W W W W W W W W W W W W W W W W W W
+ W W S U W W W U U U W W W W U U W W W W
+W W U W U W W W U W W W W U U W W U U W 
+ W U W W U U W W U W W W U W W W W U W W
+W W U W W U U W W U W W U W W W W U W W
+ W W U W U W U U U W W U U W W W D W W W
+W W W U U W W W W U W W U U W W W U W W
+ W W U W U W W W W U W U W U W W W U W W
+W W U W W U U W W W U U W W U U U U W W
+ W U W W U W U W W U W W U W U W W W W W
+W W U W U U U U U U W W W U U U U U U W
+ W W U U W W W U W U U U W U W W W W U W
+W W W D W W W W U U W W W W U U W W U W
+ W W U U U W U U W U U E U U W U U U W W
+W W U W W U U W W U W W W W W U W W W W
+ W W U W W U U W W U W W W W U W W W W W
+W W U W W W U U W W U U U W U U U W W W
+ W U W W W W U W U W W W U U W W U W W W
+W W U U U U U U U U W W U W W W W U W W
+ W W W W W W W W W W W W W W W W W W W W
